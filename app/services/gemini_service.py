@@ -128,7 +128,7 @@ class GeminiService:
         """
         Limpia el texto de respuesta removiendo delimitadores de código.
         
-        Gemini a veces incluye delimitadores \`\`\`json o \`\`\` en sus respuestas.
+        Gemini a veces incluye delimitadores ```json o ``` en sus respuestas.
         Esta función los remueve para obtener JSON puro que se pueda parsear.
         
         Args:

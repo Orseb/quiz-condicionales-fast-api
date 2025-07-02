@@ -19,7 +19,7 @@ Generar un objeto JSON que contenga:
 ## Instrucciones estrictas de generación y validación
 1. **Elige una temática principal y una temática secundaria de la siguiente lista para generar el ejercicio, seleccionando ambas de forma aleatoria y equitativa, no priorices las primeras opciones, y evita repetir temáticas presentes en 'tematicas_previas'**:
    Temáticas posibles: comparaciones numéricas, uso de operadores lógicos (and, or, not), selección múltiple con elif, comparación de strings, validación de rangos, evaluación de condiciones compuestas, uso de variables booleanas, comparación de valores de entrada, selección de caminos alternativos, manejo de igualdad y desigualdad, validación de datos simples, combinación de condiciones, y cualquier otro contexto sencillo y relevante para principiantes en condicionales.
-   Elige una temática principal y una secundaria distintas, y combina ambas en el ejercicio (por ejemplo: comparación de strings + validación de rangos, o selección múltiple + operadores lógicos). Si 'tematicas_previas' está vacía, puedes elegir cualquier combinación. Si tiene valores, debes SI O SI usar combinaciones nuevas.
+   Elige una temática principal y una secundaria distintas, y combina ambas en el ejercicio. Si 'tematicas_previas' está vacía, puedes elegir cualquier combinación. Si tiene valores, debes SI O SI usar combinaciones nuevas.
 2. **No generes preguntas sobre edad, precio, altura o peso salvo que hayan pasado al menos 3 ejercicios de otras temáticas** (si no tienes contexto previo, actúa como si la última temática usada fuera distinta a estas).
 3. **No repitas la combinación 'nombre + comparación de strings' en ejercicios consecutivos ni frecuentes. Alterna combinaciones inusuales y variadas.**
 4. **Varía los valores usados en los ejercicios**:
@@ -74,7 +74,7 @@ Antes de decidir la respuesta correcta y la explicación, sigue este checklist:
 - No generes preguntas donde la explicación contradiga la opción correcta.
 - Si detectas cualquier error, reinicia el proceso desde el paso 1.
 
-## Ejemplos de variedad esperada
+## Ejemplos de variedad esperada (no debes seguirlos al pie de la letra, son solo ejemplos de combinaciones)
 - Ejemplo 1: Un ejercicio que combine comparación de números y operadores lógicos.
 - Ejemplo 2: Un ejercicio que combine selección múltiple (if-elif-else) y validación de rangos.
 - Ejemplo 3: Un ejercicio que combine comparación de strings y manejo de igualdad/desigualdad.
@@ -126,6 +126,6 @@ def build_prompt_with_previous_topics(previous_topics: list = None) -> str:
     
     import json
     topics_json = json.dumps(previous_topics, ensure_ascii=False)
-    avoid_instruction = "## Importante: Evita usar cualquiera de las temáticas listadas en 'tematicas_previas' para generar esta nueva pregunta."
+    avoid_instruction = "## Importante: Evita SI O SI usar cualquiera de las temáticas listadas en 'tematicas_previas' para generar esta nueva pregunta."
     
     return f"{GEMINI_SYSTEM_PROMPT}\n\n# tematicas_previas = {topics_json}\n\n{avoid_instruction}\n"

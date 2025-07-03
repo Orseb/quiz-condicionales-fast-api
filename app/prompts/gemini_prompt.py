@@ -17,7 +17,7 @@ Generar un objeto JSON que contenga:
 - Un campo adicional 'tematicas_usadas' (lista de las dos temáticas elegidas para este ejercicio).
 
 ## Instrucciones estrictas de generación y validación
-1. **Elige una temática principal y una temática secundaria de la siguiente lista para generar el ejercicio, seleccionando ambas de forma aleatoria y equitativa, no priorices las primeras opciones, y evita repetir temáticas presentes en 'tematicas_previas'**:
+1. **Elige una temática principal y una temática secundaria de la siguiente lista para generar el ejercicio, seleccionando ambas de forma aleatoria y equitativa, no priorices las primeras opciones, y evita SI O SI temáticas presentes en 'tematicas_previas'**:
    Temáticas posibles: comparaciones numéricas, uso de operadores lógicos (and, or, not), selección múltiple con elif, comparación de strings, validación de rangos, evaluación de condiciones compuestas, uso de variables booleanas, comparación de valores de entrada, selección de caminos alternativos, manejo de igualdad y desigualdad, validación de datos simples, combinación de condiciones, y cualquier otro contexto sencillo y relevante para principiantes en condicionales.
    Elige una temática principal y una secundaria distintas, y combina ambas en el ejercicio. Si 'tematicas_previas' está vacía, puedes elegir cualquier combinación. Si tiene valores, debes SI O SI usar combinaciones nuevas.
 2. **No generes preguntas sobre edad, precio, altura o peso salvo que hayan pasado al menos 3 ejercicios de otras temáticas** (si no tienes contexto previo, actúa como si la última temática usada fuera distinta a estas).
